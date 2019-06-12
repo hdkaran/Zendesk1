@@ -49,6 +49,8 @@ The pre-requisites you will need for this project to run are:
 After you have successfully installed all the above requirements, follow the following steps:
 1. Open terminal and "cd" to the Folder you have extracted the files to.
 2. Make sure you're in the root folder, i.e., Zendesk1-master.
+3. Type and enter the following command: java -jar dist/Zendesk1.jar
+or
 3. Type "ant compile" and press enter.
 4. Now type "ant run" and press enter. Wait a few seconds until an application pops up.
 5. The application should have loaded by now. 

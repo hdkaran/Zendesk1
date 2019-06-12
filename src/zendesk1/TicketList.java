@@ -15,19 +15,21 @@ public class TicketList {
     public Ticket[] ticketListArray; //to store ticket array
     private boolean nextPage; //to store if next page exists or not
     private boolean prevPage; //to store if prev page exists or not
-    
+    private String uName;
+    private String pass;
     HTTPRequest pageRequest; //Object of HTTP request
     UserInterface frame=Zendesk1.frame; 
 
     public TicketList(String uName, String pass) {
-        pageRequest = new HTTPRequest(uName, pass);//initializes the HTTP request variable
+        this.uName=uName;   
+        this.pass=pass;
     }
 
     public boolean getSingleTicketById(long id) {
         if (id <= 0) { //if by any chance if gets to 0 error message is displayed
             frame.dialogBoxMessageDisplay("Sorry, this is an invalid id. Id cannot be 0 or negative.");
         }
-         
+        pageRequest=new HTTPRequest(uName,pass);
         pageRequest.URL = pageRequest.URL + "/" + id + ".json"; //changes the URL to get ticket by id
         String singleTicketJsonString = pageRequest.makeRequest(); //request is sent here and response stored in singleTicketJsonString
         singleTicket = jsonHandler.parseSingleTicket(singleTicketJsonString); //singleTicketJsonString is parsed using jsonHandler
@@ -52,7 +54,7 @@ public class TicketList {
             return false;
         }
         
-        
+        pageRequest=new HTTPRequest(uName,pass);
         pageRequest.URL = pageRequest.URL + ".json?page=" + ticketsFromPage + "&per_page=" + ticketsPerPage;
         String jsonString = pageRequest.makeRequest();
         //Request successful if responseCode between 199 and 400

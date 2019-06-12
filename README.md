@@ -14,6 +14,7 @@ The project has been developed using JAVA 8 and Netbeans IDE.
 # Pre-Requisites
 After you have downloaded the project from github. Extract it anywhere you like.
 The Extracted folder will be named as Zendesk1-master.
+The source code is commented throughout so feel free to go through it.
 * Major Code is contained in "Zendesk1-master/src/zendesk1" folder.
 * Testing Code is contained in "Zendesk1-master/test/zendesk1" foler.
 

@@ -35,11 +35,11 @@ The pre-requisites you will need for this project to run are:
     and paste them to
     "Library/Java/Extensions/" on your MacBook.
     
-    To access the "Library" folder either press "Shift+Command+C" and select your drive
+    To access the "Library" folder either press "Shift+Command+C" and select your drive>Library>Java>Extensions>"paste here"
     or
     Go into terminal:
     Enter=> cd
-    Enter=> cd Library
+    Enter=> cd Library/Java?Extensions
     
 5. Netbeans 8.2 (Optional)
     Download it from https://netbeans.org/downloads/8.2/
@@ -65,8 +65,9 @@ To run the tests follow these steps.
 2. Make sure you're in the root folder, i.e., Zendesk1-master.
 3. Type "ant test" and press enter.
 4. tests will runn automatically. Look for "Passed" words in the output generated. If anything fails, it will be reported.
+5. If you see pop-ups during testing - that means tests are going well.
 
 # For Zendesk Team
-I have really enjoyed myself taking up this coding challenge. At the beginning I tried doing it in Ruby, although I didn't know Ruby at all but just wanted to give it a shot. Spent 4 days at Ruby and then switched back to Java. I've tried hard to do the best I can. I just want to thank you all at Zendesk for holding up this challenge. 
+I have really enjoyed myself taking up this coding challenge. At the beginning I tried doing it in Ruby, although I didn't know Ruby at all but just wanted to give it a shot. Spent 4 days at Ruby and then switched back to Java. I've tried hard to do the best I can. I just want to thank you all at Zendesk for holding up this challenge as I personally have learnt a lot of new things, just to get this done. 
 
 I would love to have some feedback on my work from the amazing team at Zendesk even if I'm progressed to next stage or not. Hope to hear from you guys soon :).

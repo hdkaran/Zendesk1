@@ -1,18 +1,22 @@
 # Zendesk1
-Hi and thanks for Downloading Ticket Officer - The Ticket View.
-This is a guide on how to set up and run the project on your local machine.
+Hi and thanks for Downloading Ticket Officer - The Ticket Viewer.
+This is a guide on how to set up and run the project on your local machine. This guide assumes that the testers are using a mac and the they've little to pro knowledge of general mac use. (Although, I know you guys are pros :)).
 
 # About the Project
-The project has been created using JAVA 8 and Netbeans IDE.
+The project has been developed using JAVA 8 and Netbeans IDE.
 * This project helps to view tickets from the Zendesk API using your subdomain account.
-* The application has 3 tabs in total Login, Multi-Ticket and Single Ticket.
-* You can request all tickets for your account, which are displayed in sets of 25 per page.
+* The application has 3 tabs in total(located at top-center) -- Login, Multi-Ticket and Single Ticket.
+* When you login, you request all tickets for your account, which are displayed in sets of 25 per page.
 * You can double click on any ticket if you want to view more information about it.
 * Alternatively, you can search for information about a single ticket in the single-ticket view tab.
 
+
 # Pre-Requisites
-After you have downloaded the project. Extract it anywhere you like.
+After you have downloaded the project from github. Extract it anywhere you like.
 The Extracted folder will be named as Zendesk1-master.
+* Major Code is contained in "Zendesk1-master/src/zendesk1" folder.
+* Testing Code is contained in "Zendesk1-master/test/zendesk1" foler.
+
 The pre-requisites you will need for this project to run are:
 1. Java Versiion 1.8.0_211. 
     Download it from: https://java.com/en/download/manual.jsp
@@ -51,6 +55,8 @@ After you have successfully installed all the above requirements, follow the fol
 6. Once you login. You will be redirected to multi-ticket page.
 7. Click any ticket to view more information about it or seach for any single ticket in the Single ticket tab.
 8. Feel free to exploit. :)
+
+Alternatively, you can open the project in NetBeans and just press Run. (But installing NetBeans and setting up the project is a Pain in the Bum for Mac).
 
 # Testing
 The tests are contained in the test folder.

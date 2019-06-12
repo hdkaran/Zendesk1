@@ -71,4 +71,8 @@ To run the tests follow these steps.
 # For Zendesk Team
 I have really enjoyed myself taking up this coding challenge. At the beginning I tried doing it in Ruby, although I didn't know Ruby at all but just wanted to give it a shot. Spent 4 days at Ruby and then switched back to Java. I've tried hard to do the best I can. I just want to thank you all at Zendesk for holding up this challenge as I personally have learnt a lot of new things, just to get this done. 
 
+
+Do let me know if you have any questions or queries regarding the application or if you have difficulties in setting it up.
+at: karanbhatia0161@gmail.com
+
 I would love to have some feedback on my work from the amazing team at Zendesk even if I'm progressed to next stage or not. Hope to hear from you guys soon :).

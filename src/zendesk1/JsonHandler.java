@@ -5,7 +5,6 @@
  */
 package zendesk1;
 
-
 import org.json.*;
 
 /**
@@ -13,8 +12,11 @@ import org.json.*;
  * @author karan
  */
 public class JsonHandler {
+
     public static final int MAX = 25; //for now set at 25 
-    UserInterface frame = Zendesk1.frame;;
+    UserInterface frame = Zendesk1.frame;
+
+    ;
 
    
 
@@ -35,7 +37,7 @@ public class JsonHandler {
     }
 
     public TicketList parseTicketList(String jsonString) {
-        TicketList ticketList=frame.ticketList;
+        TicketList ticketList = frame.ticketList;
         JSONObject jsonParser;
         try {
             jsonParser = new JSONObject(jsonString);
@@ -112,26 +114,36 @@ public class JsonHandler {
         ticket.satisfactionRating = (Object) ticketStructure.get("satisfaction_rating");
 
         //parsing long variables if they're not null---------------------------------------------------
-        if (ticketStructure.get("submitter_id") != null) {
+        if (!ticketStructure.get("submitter_id").equals(null)) {
             ticket.submitterId = (long) ticketStructure.getLong("submitter_id");
         }
-        if (ticketStructure.get("assignee_id") != null) {
-            ticket.assigneeId = (long) ticketStructure.get("assignee_id");
+        if (!ticketStructure.get("assignee_id").equals(null)) {
+            ticket.assigneeId = ticketStructure.getLong("assignee_id");
+        } else {
+            ticket.assigneeId = 0;
         }
         if (!ticketStructure.get("organization_id").equals(null)) {
             ticket.organizationId = (long) ticketStructure.get("organization_id");
         }
-        if (ticketStructure.get("group_id") != null) {
+        if (!ticketStructure.get("group_id").equals(null)) {
             ticket.groupId = (long) ticketStructure.get("group_id");
+        } else {
+            ticket.groupId = 0;
         }
         if (!ticketStructure.get("forum_topic_id").equals(null)) {
             ticket.forumTopicId = (long) ticketStructure.get("forum_topic_id");
+        } else {
+            ticket.forumTopicId = 0;
         }
         if (!ticketStructure.get("problem_id").equals(null)) {
             ticket.problemId = (long) ticketStructure.get("problem_id");
+        } else {
+            ticket.problemId = 0;
         }
-        if (ticketStructure.get("brand_id") != null) {
+        if (!ticketStructure.get("brand_id").equals(null)){
             ticket.brandId = (long) ticketStructure.getLong("brand_id");
+        } else {
+            ticket.brandId = 0;
         }
 
         //filling data into the via part of ticket-------------------------------------------------------
@@ -174,7 +186,6 @@ public class JsonHandler {
             ticket.tags = new String[1];
             ticket.tags[0] = "";
         }
- 
 
         jsonArray = (JSONArray) ticketStructure.getJSONArray("custom_fields"); //custom_fields is an array hence handling it with array manipulation
         if (!jsonArray.isEmpty()) {
